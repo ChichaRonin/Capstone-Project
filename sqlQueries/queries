@@ -1,0 +1,83 @@
+--DROP TABLE ContractType;
+-- DROP TABLE ContractTemplate;
+
+/* Table that holds information on Contract Types*/ /*
+CREATE TABLE ContractType (
+typeID int NOT NULL PRIMARY KEY,		-- Primary Key that holds the contract typeID
+typeName varchar (50) NOT NULL,			-- holds the contract type name
+typeDescription varchar(MAX) NOT NULL,	-- holds detailed description of contract type
+templateID int NOT NULL,				-- Foreign Key to reference the templateID on the template table
+dateEntered datetime,					-- When was this contract type entered
+whoEntered varchar(8),					-- Who entered the Contract type
+isActive bit,							-- Shows if the contract type is active
+FOREIGN KEY (templateID) REFERENCES ContractTemplate(templateID)     -- Set's foreign key to connect to contract template
+);
+*/
+/* Table that holds information on Contract Templates*/ /*
+CREATE TABLE ContractTemplate (
+templateID int IDENTITY(1,1)  NOT NULL PRIMARY KEY,    -- Primary Key
+templateName varchar(450) NOT NULL,        -- name of the Contract Template
+version int NOT NULL,                    -- Version number of template
+dateCreated datetime NOT NULL,            -- When this contract template/version was uploaded
+dateSuperceded datetime NULL,        -- When was this contract template superseded
+filePathName varchar(max) NOT NULL,     -- Holds the file 
+isArchived bit NOT NULL,                -- See if this version has been archived
+createdBy varchar(MAX) NOT NULL,            -- User who uploaded specific version
+notes varchar(MAX) NULL,            -- Any notes, particularly on any updates
+versionSuperceded int NULL,            -- Point to another contract Template for version control
+FOREIGN KEY (versionSuperceded) REFERENCES ContractTemplate(templateID)     -- Set's foregin key to connect to the pervious contract template version
+);
+*/
+
+
+-- DROP TRIGGER archiveAfterUpdateTrigger;
+-- Archives the previous version based on templateName and version
+/*
+CREATE TRIGGER archiveAfterUpdateTrigger
+ON [dbo].[ContractTemplate] AFTER 
+INSERT AS 
+BEGIN
+	SET nocount on;
+	UPDATE [dbo].[ContractTemplate] SET
+		isArchived = 1
+		-- Make a query that gets us the previous based templateName and version from templateID
+		WHERE templateName IN (SELECT templateName FROM ContractTemplate WHERE TemplateID IN (SELECT DISTINCT TemplateID FROM Inserted)) 
+		-- Get version number of previous version
+		AND version IN (SELECT (MAX(version) - 1) FROM ContractTemplate WHERE templateName IN (SELECT templateName FROM ContractTemplate WHERE TemplateID IN (SELECT DISTINCT TemplateID FROM Inserted)))
+END
+GO; 
+*/
+
+-- DROP TRIGGER updateVersionTrigger
+-- Updates the version in the table
+/*
+CREATE TRIGGER updateVersionTrigger
+ON [dbo].[ContractTemplate] AFTER 
+INSERT AS 
+BEGIN
+	SET nocount on;
+	UPDATE [dbo].[ContractTemplate] SET
+		version = (SELECT MAX(version) + 1 FROM ContractTemplate WHERE templateName IN (SELECT templateName FROM ContractTemplate WHERE TemplateID IN (SELECT DISTINCT TemplateID FROM Inserted)))
+		-- Chooses the value that was just inserted
+		WHERE TemplateID IN (SELECT DISTINCT TemplateID FROM Inserted) AND version != 1
+END
+GO;
+*/
+
+-- DROP TRIGGER updateDateSupercededTrigger
+-- Updates the dateSuperceded and the versionSuperceded of the row being updated
+/*
+CREATE TRIGGER updateDateSupercededTrigger
+ON [dbo].[ContractTemplate] AFTER 
+INSERT AS 
+BEGIN
+	SET nocount on;
+	UPDATE [dbo].[ContractTemplate] SET
+		dateSuperceded = SYSDATETIME(), versionSuperceded = (SELECT MAX(version) FROM ContractTemplate WHERE templateName IN (SELECT templateName FROM ContractTemplate WHERE TemplateID IN (SELECT DISTINCT TemplateID FROM Inserted)))
+		-- Make a query that gets us the previous based templateName and version from templateID
+		WHERE templateName IN (SELECT templateName FROM ContractTemplate WHERE TemplateID IN (SELECT DISTINCT TemplateID FROM Inserted)) 
+		-- Get version number of previous version
+		AND version IN (SELECT MAX(version) - 1 FROM ContractTemplate WHERE templateName IN (SELECT templateName FROM ContractTemplate WHERE TemplateID IN (SELECT DISTINCT TemplateID FROM Inserted)))
+END
+GO; 
+*/

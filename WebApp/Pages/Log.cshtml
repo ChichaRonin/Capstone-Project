@@ -1,0 +1,39 @@
+@page
+@model ContractLogModel
+@{
+    ViewData["Title"] = "Activity Log";
+}
+
+<div class="jumbotron">
+    <h1> Activity Log </h1>
+    <!--mailto link dirrectly to the email address-->
+    <p class="lead">Below is all activity that has occurred in the last year. For anything older, please contact IT at <a href="mailto:IT_Applications@jacksoncounty.org">IT_Applications@jacksoncounty.org</a></p>
+</div>
+<!-- Currently the table below is hard coded to match the table in the datase. Need to update it to query the database for the proper information. -->
+<!-- added all things -->
+ <table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Version</th>
+        <th>Date Entered</th>
+        <th>Date Replaced</th>
+        <th>Archived</th>
+        <th>Creator</th>
+        <th>Notes</th>
+    </tr>
+<!--using data from logtable from log.cshtml.cs-->
+    @foreach (var row in Model.LogTable)
+    {
+        <tr>
+            <td> @row.templateID </td>
+            <td> @row.templateName </td>
+            <td> @row.version </td>
+            <td> @row.dateCreated </td>
+            <td> @row.dateSuperceded</td>
+            <td> @row.isArchived </td>
+            <td> @row.createdBy </td>
+            <td> @row.notes </td> 
+        </tr>
+    } 
+</table> 

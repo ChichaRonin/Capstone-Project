@@ -1,0 +1,30 @@
+@page
+@model UploadFileModel
+@{
+     ViewData["Title"] = "Upload Page";
+
+}
+
+<div class="jumbotron">
+    <h1>Create a New Template</h1>
+    <p class="lead">Fill out the information below to create a new contract template.</p>
+</div>
+<form method="post" enctype="multipart/form-data">
+    <!-- This is how the buttons reference functions in the backend 
+    They use the asp-page-handler to access postFunctions-->
+    <!-- This form is used to upload to a local folder-->
+    <input type="file" asp-for="Upload"/>
+<td>
+    <div align="left"><label>Template Name</label></div>
+        <input type="text" asp-for="template"/>
+</td>    
+<td>
+    <label for="notesIn">Template Notes</label>
+    <textarea id="notesIn" placeholder="write your notes here" rows="10" cols="50" asp-for="notes"></textarea>
+</td>
+    <div align="left"></div>
+    <input type="submit" value="Upload File" class="btn-sucesss"/>
+    <b>@ViewData["Message"]</b>
+
+</form>
+ </div>

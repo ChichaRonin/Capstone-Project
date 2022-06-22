@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2022-02-22T00:05:19.0724497Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2022-02-22T00:05:01.4750641Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "d752d3bf-03ff-45f4-9589-2d2d3eec7acb"
+    },
+    "secrets1.resourceGroupName": {
+      "Name": "secrets1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "cloud-shell-storage-westus"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "JCCA_RG"
+    },
+    "secrets1.subscriptionId": {
+      "Name": "secrets1.subscriptionId",
+      "Type": "subscription",
+      "Value": "d752d3bf-03ff-45f4-9589-2d2d3eec7acb"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@page
+@model ContractRepositoryModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Generic title for the page -->
+<div class="jumbotron">
+    <!-- Page title -->
+    <!-- Creates button that will redirect the user to the upload page-->
+    <h1>Contract Templates <a class="btn btn-primary" role="button" asp-page="/UploadFile">+New Template</a></h1> 
+    <p class="lead">Below is a list of the most current contract templates</p>
+</div>
+
+<!-- Table creation and display -->
+<table>
+    <!-- Table header display -->
+    <tr>
+        <th>Download</th>
+        <th>Template Name</th>
+        <th>Version</th>
+        <th>Date Created</th>
+        <th>Notes</th>
+        <th>Update</th>
+    </tr>
+    
+
+
+    <!-- Loops through all data in the RequestTable list and displays each row -->
+    @foreach (var row in Model.RequestTable)
+    {    
+        <tr>
+            <!-- Creates download button and allows user to download file -->
+            <td><a class="btn btn-primary" role="button" href="@row.filePathName" download="@row.templateName v_@row.version">Download</a></td>
+            <td> @row.templateName </td> 
+            <td> @row.version </td>
+            <td> @row.dateCreated </td>
+            <td> @row.notes </td>
+            <!-- Creates button that will redirect the iser to the update page-->
+            <td><a class="btn btn-primary" role="button" asp-page="/Update">Update</a></td>
+    </tr>
+    }
+</table>

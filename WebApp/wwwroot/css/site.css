@@ -1,0 +1,76 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*table format*/
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+/*background colors and colors for the table*/
+table tr {
+  background-color: #f4f8f9;
+  border-top: 1px solid #78858e;
+  border-bottom: 1px solid #78858e;
+}
+
+/* first row of the table i.e. the column labels*/
+table tr:first-child {
+  background-color: #e1e7e7;
+  border-bottom: 2px solid #78858e;
+}
+
+/* table border*/
+table td {
+  border-right: 1px solid black;
+}
+
+table td:last-child {
+  border-right: none;
+}
+
+/* used to allow the button to me on the same line as the title, in repo*/
+h1 {
+  display: inline-block;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+}
+
+textarea {
+  display: block;
+}
+
+/* primary color for the button*/
+.btn-primary{
+  background-color: #006A53;
+}
+
+/* when mouse is hovering over button change to this color*/
+.btn-primary:hover{
+  background-color: #018472;
+}
+
+/* button is clicked will change to this color*/
+.btn-primary:focus {
+  background-color: #32b5a3;
+}

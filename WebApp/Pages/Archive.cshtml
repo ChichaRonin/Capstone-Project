@@ -1,0 +1,39 @@
+@page
+@model ContractArchiveModel
+@{
+    ViewData["Title"] = "Archive";
+}
+
+<!-- Generic title for the page -->
+<div class="jumbotron">
+    <h1> Template Archive </h1>
+    <p class="lead">Below is a list of contract templates that have been archived and are no longer in use</p>
+</div>
+
+<!-- Table creation and display -->
+<table>
+    <!-- Table header display -->
+    <tr>
+        <th>Template Name</th>
+        <th>Version</th>
+        <th>Date Created</th>
+        <th>Notes</th>
+        <th>Download</th>
+    </tr>
+    
+
+
+    <!-- Loops through all data in the RequestTable list and displays each row -->
+    @foreach (var row in Model.RequestTable)
+    {    
+        <tr>
+            <td> @row.templateName </td> 
+            <td> @row.version </td>
+            <td> @row.dateCreated </td>
+            <td> @row.notes </td>
+            <!-- Creates a button that can download the file in href and give it the name in download which is the tempalteName with ther verison appended onto it -->
+            <td><a class="btn btn-primary" role="button" href="@row.filePathName" download="@row.templateName v_@row.version">Download</a></td>
+    </tr>
+    }
+</table>
+ <p class="lead">If you need to rollback an older version, download the desired version from this page and update the current version via the update page.</p>
