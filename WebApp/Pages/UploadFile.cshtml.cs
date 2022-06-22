@@ -59,7 +59,7 @@ namespace WebApp.Pages
             SqlConnectionStringBuilder builded = new SqlConnectionStringBuilder();
 
             // Connection string to connect to the database
-            builded.ConnectionString = "Server=tcp:jccserver.database.windows.net,1433;Initial Catalog=JCCBD;Persist Security Info=False;User ID=kenobi;Password=Liamiscolorblind123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            builded.ConnectionString = "Insert Here";
 
             // SQL query stuff: creates connection, opens, and queries the database for the Upload Page
             SqlConnection connection = new SqlConnection(builded.ConnectionString);

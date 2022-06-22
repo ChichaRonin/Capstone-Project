@@ -33,7 +33,7 @@ public class ContractLogModel : PageModel
                 SqlConnectionStringBuilder builded = new SqlConnectionStringBuilder();
 
                 //connection with the database server
-                builded.ConnectionString="Server=tcp:jccserver.database.windows.net,1433;Initial Catalog=JCCBD;Persist Security Info=False;User ID=kenobi;Password=Liamiscolorblind123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+                builded.ConnectionString="Insert here";
 
                 using (SqlConnection connection = new SqlConnection(builded.ConnectionString))
                 {

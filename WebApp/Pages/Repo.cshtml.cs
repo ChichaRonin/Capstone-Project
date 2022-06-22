@@ -37,7 +37,7 @@ public class ContractRepositoryModel : PageModel
             SqlConnectionStringBuilder builded = new SqlConnectionStringBuilder();
 
             // Connection string to connect to the database
-            builded.ConnectionString = "Server=tcp:jccserver.database.windows.net,1433;Initial Catalog=JCCBD;Persist Security Info=False;User ID=kenobi;Password=Liamiscolorblind123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            builded.ConnectionString = "Insert Here";
 
             // Create a dateTime to be used in creating the Row (class)
             DateTime date_ = new DateTime(1900, 1, 1, 00, 00, 00);

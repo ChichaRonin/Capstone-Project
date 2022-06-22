@@ -8,49 +8,49 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApp
 build_property.RootNamespace = WebApp
-build_property.ProjectDir = C:\Users\Ronin Ganoot\OneDrive\Desktop\Capstone\JCC\WebApp\
+build_property.ProjectDir = c:\Users\Ronin Ganoot\OneDrive\Desktop\CS Projects\Capstone Project For Public Repo\Capstone-Project\WebApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Ronin Ganoot\OneDrive\Desktop\Capstone\JCC\WebApp
+build_property.MSBuildProjectDirectory = c:\Users\Ronin Ganoot\OneDrive\Desktop\CS Projects\Capstone Project For Public Repo\Capstone-Project\WebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/Archive.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/Archive.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJjaGl2ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/Index.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/Log.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/Log.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/Repo.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/Repo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVwby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/Update.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/UploadFile.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/UploadFile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXBsb2FkRmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/_ViewImports.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/_ViewStart.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronin Ganoot/OneDrive/Desktop/Capstone/JCC/WebApp/Pages/Shared/_Layout.cshtml]
+[c:/Users/Ronin Ganoot/OneDrive/Desktop/CS Projects/Capstone Project For Public Repo/Capstone-Project/WebApp/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1lnhnt7yf2
